@@ -1,0 +1,74 @@
+
+<header>
+    <nav>
+      <div class="logo">Ridesharing App</div>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/rides">Rides</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li id="loginlink"><a routerLink="/signin">Login</a></li>
+        <li><a routerLink="/signup">Create Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+<div class="signup-container">
+    <form (ngSubmit)="signUp()">
+        <h1>User Registration Form</h1>
+      
+        <div *ngIf="currentStep === 1">
+          <span>First Name </span>
+          <input type="text" name="FirstName" [(ngModel)]="newUser.FirstName"><br><br>
+          <span>Last Name </span>
+          <input type="text" name="LastName" [(ngModel)]="newUser.LastName"><br><br>
+    
+        </div>
+      
+        <div *ngIf="currentStep === 2">
+          <span>Id Number </span>
+          <input type="text" name="IdNumber" [(ngModel)]="newUser.IdNumber" required="IdNumber"><br><br>
+          <span>Country </span>
+          <input type="text" name="Country" [(ngModel)]="newUser.Country"><br><br>
+    
+        </div>
+      
+        <div *ngIf="currentStep === 3">
+          <span>Province</span>
+          <input type="text" name="Province" [(ngModel)]="newUser.Province"><br><br>
+          <span>District </span>
+          <input type="text" name="District" [(ngModel)]="newUser.District"><br><br>
+          <span>Sector </span>
+          <input type="text" name="Sector" [(ngModel)]="newUser.Sector"><br><br>
+         
+        </div>
+      
+        <div *ngIf="currentStep === 4">
+          <span>Email </span>
+          <input type="text" name="Email" [(ngModel)]="newUser.Email"><br><br>
+          <span>Phone Number </span>
+          <input type="text" name="PhoneNumber" [(ngModel)]="newUser.PhoneNumber"><br><br>
+          
+        </div>
+      
+        <div *ngIf="currentStep === 5">
+          <span>Password </span>
+          <input type="password" name="Password" [(ngModel)]="newUser.Password"><br><br>
+          
+        </div>
+      
+        <div class="buttons">
+          <button type="button" (click)="prevStep()" *ngIf="currentStep > 1">Previous</button>
+          <button type="button" (click)="nextStep()" *ngIf="currentStep < totalSteps">Next</button>
+          <button type="submit" *ngIf="currentStep === totalSteps">Sign Up</button>
+               <!-- <button type="button" (click)="nextStep()" *ngIf="currentStep < totalSteps && newUserForm.valid">Next</button> -->
+               <!-- <button type="submit" *ngIf="currentStep === totalSteps">Sign Up</button> -->
+        </div>
+      </form>
+      
+
+
+</div>

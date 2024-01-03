@@ -1,0 +1,114 @@
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    background: url('https://images.pexels.com/photos/4606345/pexels-photo-4606345.jpeg?auto=compress&cs=tinysrgb&w=600.jpg') center center / cover no-repeat; /* Set the image as a background */
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px; 
+    margin-bottom: 20px;
+  }
+  
+  span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; 
+    font-size: 18px; /* Increase the font size of labels */
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px; /* Increase the padding for larger input fields */
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Increase the margin-bottom for more space between input fields */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; /* Increase the margin-top for more space between buttons and inputs */
+  }
+  
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px; /* Increase the padding for a larger button */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size of the button */
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .buttons button[disabled] {
+    cursor: not-allowed;
+    background-color: #ddd;
+    color: #666;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.916);
+    padding: 20px;
+    color: white;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 20px;
+  }
+  
+ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #ffcc00; 
+  }
+  
+  
